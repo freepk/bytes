@@ -30,18 +30,16 @@ func TestIndexQuoted(t *testing.T) {
 	p, err := IndexForEach(testBytes, testIndexQuoted, testEachPrintln)
 	if err != nil {
 		t.Fail()
-	} else {
-		t.Log("len(testBytes)", len(testBytes), "p", p)
 	}
+	t.Log("len(testBytes)", len(testBytes), "p", p)
 }
 
 func TestIndexScoped(t *testing.T) {
 	p, err := IndexForEach(testBytes, testIndexScoped, testEachPrintln)
 	if err != nil {
 		t.Fail()
-	} else {
-		t.Log("len(testBytes)", len(testBytes), "p", p)
 	}
+	t.Log("len(testBytes)", len(testBytes), "p", p)
 }
 
 func BenchmarkIndexQuoted(b *testing.B) {
